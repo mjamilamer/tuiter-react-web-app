@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+</head>
+<body>
+<!-- Setting back navigation, image banner, profile image and link -->
+<a href='profile.html'>Back</a>
+<h1>Tuiter</h1>
+<h2>Edit Profile</h2>
+<a href='profile.html'>Save</a>
+<img width="100%" height="200px"
+     src="images/banner_image.jpg"><br/>
+<input type="file" id="banner-updater" accept=".jpg,.png"/><br/>
+<img width="48px" height="48px"
+     src="images/profile_placeholder_image.jpg"><br/>
+<input type="file" id="avatar-updater" accept=".jpg,.png"/><br/>
+<hr>
+<label for="nameField">Name</label>
+<input type="text" id="nameField" value="WebDev" placeholder="Name"
+       onclick="document.getElementById('nameField').focus()">
+<hr>
+<label for="bioField">Bio</label><br/>
+<textarea id="bioField" cols="50" rows="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, ligula id convallis dictum, velit velit dictum velit, vel tincidunt velit velit vel velit. Sed at enim vel velit tincidunt hendrerit. Sed eget augue euismod, tincidunt velit id, congue velit. Sed eget risus euismod, tincidunt velit id, congue velit. Sed eget risus euismod, tincidunt velit id, congue velit.</textarea>
+
+
+</body>
+</html>
