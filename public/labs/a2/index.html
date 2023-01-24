@@ -97,7 +97,7 @@ My Favorite Books in no particular order
 <!--2.5 Image Tag-->
 <h2>Image tag</h2>
 
-Loading an image from the internet:<br/>S
+Loading an image from the internet:<br/>
 
 <img width="400px"
      src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg"/>
@@ -270,6 +270,100 @@ Please
 to get dummy text<br/>
 
 Checkout my <a href="other-page.html">other page</a>
+
+<!--4.3 Anchors -->
+<!--declaring a location on the page called table-of-content link to go to section-a link to go to section-b
+    declaring location on page called section-a actual content link to go to table-of-content declaring location
+    on page called section-b actual content link to go to table-of-content -->
+<a name="table-of-content"></a>
+<h1>Table of Content</h1>
+<ul>
+    <li><a href="#embedding-website">Embedding other websites</a></li>
+    <li><a href="#embedding-youtube">Embedding Youtube</a></li>
+    <li><a href="#embedding-slides">Embedding Slides</a></li>
+</ul>
+
+
+<!--4.1 Embedding other Websites-->
+<!--	width and height attributes configure the size of the rectangle we want to dedicate to the other Web site.
+the src attribute points to the location of the other Web site -->
+<a name="embedding-website"></a>
+<h2>Embedding other websites</h2>
+<a href="#top">Top</a><br/>
+<iframe width="600"
+        height="400"
+        src="https://openai.com/">
+</iframe>
+
+<!--4.1.2 Embedding a Youtube Video-->
+<a name="embedding-youtube"></a>
+<h2>Embedding YouTube</h2>
+<a href="#top">Top</a><br/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+</iframe>
+
+<!--4.1.3 Embedding Google Slides-->
+<a name="embedding-slides"></a>
+<h2>Embedding Google slides</h2>
+<a href="#top">Top</a><br/>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQoIYM2gXzRLKt4q5D2-ZahG7zvVcAipkRvj5k9GVLiGDs8NPlLpO3Q08cPUKQbqhL6g8aZp1ZJSwrw/embed?start=false&loop=false&delayms=3000"
+        frameborder="0"
+        width="680"
+        height="418"
+        allowfullscreen="true"
+        mozallowfullscreen="true"
+        webkitallowfullscreen="true">
+</iframe>
+
+<!--4.2 Scalable vector graphics (SVG)-->
+<!--	svg declares a rectangular area where we can draw	width and height attributes configure the size of the area.
+rect tag declares a rectangular area to draw a rectangle. width and height attributes declare circle tag declares a
+rectangular area to draw a circle. cx and cy attributes declares the center position. r attribute declares the radius
+of the circle. stroke declares the color to draw with. stroke-width declares the size of the border. fill declares
+color to fill the circle -->
+
+<svg width="300"
+     height="100">
+    <rect width="300"
+          height="100"
+          style="fill:rgb(0,0,255);
+stroke:rgb(0,0,0);
+stroke-width:10;
+"/>
+    <circle cx="50" cy="50"
+            r="40"
+            stroke="green"
+            stroke-width="4"
+            fill="yellow"/>
+</svg>
+<!--4.2.1 Drawing rectangles -->
+<h2>Drawing rectangles</h2>
+
+<svg width="300" height="100">
+    <rect width="300" height="100"
+          style="fill:rgb(0,0,255); stroke-width:10;
+   stroke:rgb(0,0,0)"/>
+</svg>
+
+<!--4.2.2 Drawing circles -->
+<h2>Drawing circles</h2>
+
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40"
+            stroke="green" stroke-width="4" fill="yellow"/>
+</svg>
+
+<!--4.2.3 Drawing polygons -->
+<h2>Drawing polygons</h2>
+
+<svg width="300" height="200">
+    <polygon points="100,10 40,198 190,78 10,78 160,198"
+             style="fill:lime; stroke:purple; stroke-width:5; fill-rule:evenodd;"/>
+</svg>
+
 
 </body>
 
