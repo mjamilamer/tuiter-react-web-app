@@ -1,0 +1,15 @@
+.padding-left {
+    padding-left: 2px;
+}
+
+
+.img-fluid.override-img-size-lg {
+    max-width: 75px;
+    height: auto;
+}
+
+@media (min-width: 992px) {
+    .override-img-size-lg {
+        max-width: 50px;
+    }
+}
