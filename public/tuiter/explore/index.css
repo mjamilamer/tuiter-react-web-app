@@ -128,3 +128,12 @@ th.remove-bottom-border {
     background-color: black;
 }
 
+.img-thumbnail.override-img {
+    border-radius: 15%;
+    border: none;
+
+}
+
+.w-25.override-15 {
+    width: 15% !important;
+}

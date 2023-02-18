@@ -37,12 +37,8 @@ const NavigationSidebar = () => {
                 <i class="bi bi-person"></i>
                 <span class="d-none d-lg-block d-inline-block ps-2">  Profile</span>
             </li>
-            <li class="list-group-item override-border d-flex d-inline-block">
-
-                <span class="wd-icon-container">
+            <li class="list-group-item override-border d-flex d-inline-block">        
                     <i class="bi bi-three-dots"></i>
-                    <span class="wd-border-circle-icon"></span>
-                </span>
                 <span class="d-none d-lg-block d-inline-block ps-2">  More</span>
             </li>
             <button class="btn btn-primary mt-3 px-2 rounded-pill">Tuit</button>

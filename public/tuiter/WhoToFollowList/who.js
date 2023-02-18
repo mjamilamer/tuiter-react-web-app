@@ -20,4 +20,5 @@ export default [
     {
         avatarIcon: '../images/tesla_logo.jpg',
         userName: 'Tesla', handle: 'Tesla',
-    },];
+    }
+];
