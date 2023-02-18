@@ -1,118 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Explore</title>
-    <link href="index.css" rel="stylesheet"/>
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="../../vendors/bootswatch/bootstrap.min.css" rel="stylesheet"/>
+    <link href="index.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Explore screen</title>
 </head>
-<!-- potentially set the body to have system dark and light setting -->
-<body class="wd-margin-offset-left-16px wd-bg-color-black">
-<div>
-    <form>
-        <label for="t-search"></label>
-        <input class=" wd-search-container wd-search-field wd-search-font  wd-fg-color-white"
-               id="t-search"
-               name="t-search"
-               placeholder="   &#xF002;    Search Tuitter"
-               type="search"/>
-        <a href="explore-settings.html" class="wd-cog wd-offset wd-settings-link-sm">
-            <i class="fa fa-cog fa-2x "> </i>
-        </a>
-    </form>
-    <div class="wd-tabs">
-        <a class="wd-tabs wd-active-tab">For you</a>
-        <a class="wd-inactive-tab">Trending</a>
-        <a class="wd-inactive-tab">COVID-19</a>
-        <a class="wd-inactive-tab">News</a>
-        <a class="wd-inactive-tab">Sports</a>
-        <a class="wd-inactive-tab">Entertainment</a>
-    </div>
+<body>
 
-</div>
-
-<div class="wd-white-dot">...</div>
-<br>
-
-<table class="wd-post">
-    <tr>
-        <td class="wd-padding-bottom">
-            <div class="wd-dots">...</div>
-            <div class="wd-topic">Trending in Science</div>
-            <div class="wd-title">Starship</div>
-            <div class="wd-tuits">55.5k Tuits</div>
-        </td>
-    </tr>
-    <tr>
-        <td class="wd-padding-bottom">
-            <div class="wd-dots">...</div>
-            <div class="wd-topic">Trending in Technology</div>
-            <div class="wd-title">Just Claimed</div>
-            <div class="wd-tuits">12.4k Tuits</div>
-        </td>
-    </tr>
-    <tr>
-        <td class="wd-padding-bottom">
-            <div class="wd-post-author">
-                <img src="../images/nytimes.jpg" alt="Author Image" height="20" width="20">
-                <span class="wd-title">New York Times<i class="fa fa-check fa-2xs icon"></i> </span>
-                <span class="wd-topic">* Yesterday</span>
-            </div>
-
-            <div class="wd-title">Analysis: Balloon Incident Reveals More Than Spying</div>
-        </td>
-        <td class="wd-padding-bottom">
-            <img class="wd-image" src="../images/nytimes-square.jpg" alt="nytimes">
-        </td>
-    </tr>
-    <tr>
-        <td class="wd-padding-bottom">
-            <div class="wd-post-author">
-                <img src="../images/google.jpg" alt="Author Image" height="20" width="20">
-                <span class="wd-title">Google<i class="fa fa-check fa-2xs icon"></i> </span>
-                <span class="wd-topic">* This Week</span>
-            </div>
-
-            <div class="wd-title">In honor of #BlackHistoryMonth, see how we’re bringing the Black
-                experience to the forefront of our products and services.
-            </div>
-        </td>
-        <td class="wd-padding-bottom">
-            <img class="wd-image" src="../images/google-square.jpg" alt="google">
-        </td>
-    </tr>
-    <tr>
-        <td class="wd-padding-bottom">
-            <div class="wd-dots">...</div>
-            <div class="wd-topic">Trending in Business and finance</div>
-            <div class="wd-title">#jasmy</div>
-            <div class="wd-tuits">4,828 Tuits</div>
-        </td>
-    </tr>
-    <tr>
-        <td class="wd-padding-bottom">
-            <div class="wd-topic">COVID-19 * LIVE</div>
-            <div class="wd-title">COVID-19: News and updates for Massachusetts</div>
-        </td>
-        <td class="wd-padding-bottom">
-            <img class="wd-image" src="../images/mass.jpg" alt="mass">
-        </td>
-    </tr>
-    <tr>
-        <td class="wd-padding-bottom">
-            <div class="wd-topic">BREAKING NEWS * LIVE</div>
-            <div class="wd-title">In East Boston, a dispute between old industry and affordable
-                housing
-            </div>
-        </td>
-        <td class="wd-padding-bottom">
-            <img class="wd-image" src="../images/breaking-news-blue-600.jpg" alt="b-news">
-        </td>
-    </tr>
-
-
-</table>
+<div class="container" id="wd-explore"></div>
+<script src="index.js" type="module"></script>
 
 
 </body>

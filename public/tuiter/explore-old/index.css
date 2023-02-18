@@ -1,0 +1,192 @@
+/* CSS file for the explorer page*/
+/* background color*/
+.wd-bg-color-black {
+    background-color: black;
+}
+
+.wd-bg-color-darkgrey {
+    background-color: darkgray;
+}
+
+.wd-fg-color-white {
+    color: white;
+}
+
+.wd-rounded-corners-all-around {
+    border-radius: 50px;
+}
+
+.wd-rounded-corners-inline {
+    border-radius: 30px 0px 20px 50px;
+}
+
+.wd-grid-col-main-content {
+    width: 90%;
+    float: left;
+}
+
+.wd-grid-col-right-sidebar {
+    width: 20%;
+    float: left;
+}
+
+.wd-search-font {
+    font-family: FontAwesome, "Times New Roman", serif;
+}
+
+.wd-padding-right-20px {
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.wd-margin-offset-left-16px {
+    margin-left: 16px;
+}
+
+.wd-no-border {
+    border: 0;
+}
+
+.wd-search-container {
+    width: 89%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.wd-search-field {
+    border: none;
+    background-color: rgb(20, 23, 26);
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.wd-cog {
+    top: 10px;
+    right: 0;
+    margin-right: 12px;
+    position: absolute;
+
+}
+
+.wd-offset {
+    margin-right: 16px;
+}
+
+.wd-settings-link-sm {
+    display: none;
+}
+
+@media (min-width: 700px) {
+    .wd-settings-link-sm {
+        display: block;
+        margin-left: 10px;
+    }
+}
+
+.wd-tabs {
+    display: flex;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-bottom: 15px solid rgb(20, 23, 26);
+    justify-content: space-between;
+}
+
+.wd-inactive-tab {
+    padding: 16px;
+    font-size: 15px;
+    color: rgb(110, 118, 125);
+
+}
+
+.wd-active-tab {
+    padding: 16px;
+    color: rgb(29, 161, 242);
+    border-bottom: 2px solid rgb(29, 161, 242);
+}
+
+@media only screen and (max-width: 767px) {
+    .wd-tabs .wd-inactive-tab:last-of-type {
+        display: none;
+    }
+}
+
+
+.wd-paragraph-gray {
+    color: gray;
+}
+
+.wd-post {
+    width: 100%;
+    padding: 16px;
+    border-bottom: 1px solid lightgray;
+}
+
+.wd-topic {
+    font-size: 13px;
+    color: rgb(110, 118, 125);
+    padding-left: 5px;
+}
+
+.wd-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+
+}
+
+.wd-tuits {
+    font-size: 18px;
+    color: gray;
+
+}
+
+.wd-dots {
+
+    text-align: right;
+    position: absolute;
+    margin-right: 16px;
+    right: 0;
+    font-size: 18px;
+    color: gray;
+}
+
+.wd-white-dot {
+    text-align: right;
+    position: absolute;
+    margin-right: 16px;
+    right: 0;
+    font-size: 18px;
+    color: white;
+}
+
+.wd-padding-bottom {
+    padding-bottom: 16px;
+}
+
+
+.wd-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+    float: right;
+    margin-right: 16px;
+}
+
+
+.wd-post-author {
+    display: flex;
+    align-items: center;
+}
+
+.wd-post-author img {
+    margin-right: 12px;
+}
+
+.icon {
+    margin-left: 5px;
+    color: lightblue;
+}
