@@ -11,7 +11,7 @@ const ExploreComponent = () => {
             </div>
             <div class="col-sm-1 align-self-center">
                 <a href="explore-settings.html">
-                <i class="fa fa-cog fa-2x "> </i>
+                    <i class="bi bi-gear"></i>
                 </a>
             </div>
             </div class="">
