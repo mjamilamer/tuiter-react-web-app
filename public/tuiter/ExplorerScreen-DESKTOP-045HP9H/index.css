@@ -1,0 +1,139 @@
+.wd-padding-left-2px {
+    padding-left: 2px;
+}
+
+
+.img-fluid.override-img-size-lg {
+    max-width: 45px;
+    height: auto;
+}
+
+@media (min-width: 992px) {
+    .override-img-size-lg {
+        max-width: 50px;
+    }
+}
+
+.wd-img-pos {
+    bottom: 15px;
+    left: 20px;
+}
+
+.position-relative.override-padding {
+    padding-bottom: 5px;
+}
+
+.bi-gear.override-color {
+    color: black;
+}
+
+.wd-search-color {
+    background-color: whitesmoke;
+}
+
+.my-nav .nav-link {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.nav-tabs .nav-item:first-child a {
+    border: none;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 5px;
+}
+
+.nav-tabs .nav-item:not(:first-child) a {
+    color: gray;
+    font-weight: bold;
+}
+
+.wd-underline-text {
+    border-bottom: 5px solid rgb(29 161 242);
+    padding-bottom: 5px;
+}
+
+.wd-twitter-blue {
+    color: rgb(29 161 242);
+}
+
+.wd-icon-container {
+    position: relative;
+}
+
+.wd-circle-icon {
+    position: absolute;
+    top: 1px;
+    right: -2px;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(29, 161, 242);
+    border-radius: 50%;
+}
+
+.wd-center-circle-icon {
+    position: absolute;
+    top: 12px;
+    right: 5px;
+    width: 5px;
+    height: 5px;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.wd-border-circle-icon {
+    position: absolute;
+    top: 1px;
+    right: -3px;
+    width: 21px;
+    height: 21px;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.list-group-item.override-border {
+    border: 0;
+}
+
+.bi-three-dots.override-color {
+    color: gray;
+}
+
+.wd-blue-text {
+    color: blue;
+}
+
+.table.override-follow-style {
+    border-radius: 10px;
+    border: none;
+}
+
+th.remove-bottom-border {
+    border-bottom: none;
+}
+
+.bi-patch-check-fill.override-color-twitter-blue {
+    color: rgb(29 161 242);
+}
+
+.bi-patch-check-fill.override-color-gradient-gold {
+    background: linear-gradient(to right, #FFC107, #ffa000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary.override-color-black {
+    background-color: black;
+}
+
+.img-thumbnail.override-img {
+    border-radius: 15%;
+    border: none;
+
+}
+
+.w-25.override-15 {
+    width: 15% !important;
+}
