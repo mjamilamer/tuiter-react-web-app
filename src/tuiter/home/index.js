@@ -1,6 +1,10 @@
+import React from "react";
+
+
 const HomeComponent = () => {
     return (
-        <h1>HELLO</h1>
+        <h1>Home</h1>
+
     );
 
 }
