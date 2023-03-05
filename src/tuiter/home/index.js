@@ -6,8 +6,8 @@ import homePostArray from "../home-post-list/home-post.json";
 const HomeComponent = () => {
 
     return (
-        <>
-
+        <table>
+            <tbody>
             <tr className="row">
                 <td className="col-1"></td>
                 <td className="col-9">
@@ -16,12 +16,13 @@ const HomeComponent = () => {
                 </td>
 
             </tr>
-
-            {homePostArray.map((post) => (
-                <HomePostList key={post._id} post={post}/>
-            ))}
-
-        </>
+            <tr>
+                {homePostArray.map((post) => (
+                    <HomePostList key={post._id} post={post}/>
+                ))}
+            </tr>
+            </tbody>
+        </table>
     );
 
 }

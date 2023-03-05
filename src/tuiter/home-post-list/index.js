@@ -9,7 +9,6 @@ const HomePostList = ({post}) => {
         <>
             {!isRetweet && (
                 <>
-
                     <tr className="row">
                         <td className="col-2">
                             <img
@@ -68,7 +67,9 @@ const HomePostList = ({post}) => {
                             <div className="border rounded p-1">
                                 <img width={35}
                                      className="rounded-circle me-1 "
-                                     src={`../tuiter/images/${post.avatar}`}/>
+                                     src={`../tuiter/images/${post.avatar}`}
+                                     alt="..."
+                                />
                                 <span className="fw-bold me-1 ">{post.userName}</span>
                                 <span><i
                                     className="bi bi-patch-check-fill text-primary me-1 "></i></span>
