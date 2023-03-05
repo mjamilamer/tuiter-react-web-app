@@ -1,24 +1,40 @@
 [
   {
-    "_id": "elonMusk1",
+    "_id": "spacex1",
+    "retweet": false,
+    "likeComment": true,
     "avatar": "spacex.png",
-    "userName": "Elon Musk",
-    "handle": "@elonmusk",
+    "userName": "SpaceX ",
+    "handle": "@SpaceX ",
     "time": "23h",
     "title": "Amazing show about @inspiration4x mission!",
-    "image": "grimes-karl-marx.jpg",
+    "image": "titostarship.jpg",
     "postTitle": "Countdown: Inspirational4 Mission to Space | Netflix Official Site",
-    "description": "From training to launch to landing, this all-access docuseries rides along with the Inspiration4 crew on the first all-civilian orbital space ... netflix.com"
+    "description": " Dennis and Akiko Tito are the first two crew members on Starship's second commercial spaceflight around the Moon"
   },
   {
     "_id": "elonMusk1",
-    "avatar": "spacex.png",
+    "retweet": false,
+    "likeComment": false,
+    "avatar": "elon_avatar.jpg",
     "userName": "Elon Musk",
-    "handle": "@elonmusk",
-    "time": "23h",
+    "handle": "@elonmusky",
+    "time": "15h",
     "title": "Amazing show about @inspiration4x mission!",
-    "image": "grimes-karl-marx.jpg",
+    "image": "",
     "postTitle": "Countdown: Inspirational4 Mission to Space | Netflix Official Site",
-    "description": "From training to launch to landing, this all-access docuseries rides along with the Inspiration4 crew on the first all-civilian orbital space ... netflix.com"
+    "description": "We might need a different name, as this is basically just Starlink with roaming capability, so you can take your terminal anywhere"
+  },
+  {
+    "_id": "spacex2",
+    "retweet": true,
+    "avatar": "spacex.png",
+    "userName": "SpaceX",
+    "handle": "@SpaceX",
+    "time": "16h",
+    "title": "THIS IS A RETWEET",
+    "image": "placeholder.jpg",
+    "postTitle": "Countdown: Inspirational4 Mission to Space | Netflix Official Site",
+    "description": "Starlink for RVs now has over 100,000 customers! Access high-speed, low-latency internet on an as-needed basis anywhere Starlink provides active coverage -> starlink.com/rv"
   }
 ]
