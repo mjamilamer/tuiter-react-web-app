@@ -1,11 +1,11 @@
 import React from "react";
 import TuitsList from "../tuits/TuitsList";
-import PostSummaryList from "../post-summary-list";
 import "./index.css";
 
 const ExploreComponent = () => {
     return (
         <>
+
             <div className="row">
                 <div className="col-11 position-relative">
                     <input placeholder="Search Tuiter"
