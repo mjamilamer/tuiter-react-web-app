@@ -1,7 +1,8 @@
 import React from "react";
-import LikeCommentShare from "../component/like-comment-share";
+import TuitStats from "../tuits/TuitStats";
 
 const HomePostList = ({post}) => {
+    const postObj = post;
     const isRetweet = post.retweet;
     const likeComment = post.likeComment;
 
@@ -27,9 +28,9 @@ const HomePostList = ({post}) => {
                                 <span className="text-muted me-1">{post.handle} - {post.time}</span>
                             </div>
 
-                            {post.description &&
+                            {post.tuit &&
                                 <div>
-                                    {post.description}
+                                    {post.tuit}
                                 </div>
                             }
                         </td>
@@ -49,9 +50,9 @@ const HomePostList = ({post}) => {
                                     />
                                 </div>
                             )}
-                            <div className="pb-2">{(!isRetweet && likeComment) &&
+                            <div className="pb-2 row">{(!isRetweet && likeComment) &&
                                 <>
-                                    <LikeCommentShare/>
+                                    <TuitStats post={post}/>
                                     <p className="text-primary">Show this thread</p>
                                 </>
                             }</div>
@@ -74,9 +75,12 @@ const HomePostList = ({post}) => {
                                 <span><i
                                     className="bi bi-patch-check-fill text-primary me-1 "></i></span>
                                 <span className="text-muted me-1">{post.handle} - {post.time}</span>
-                                {post.description && <div>{post.description}</div>}
+                                {post.tuit && <div>{post.tuit}</div>}
                             </div>
-                            <div className="pb-2"><LikeCommentShare/></div>
+                            <div className="pb-2">{(likeComment) &&
+                                //<LikeCommentShare/>
+                                <TuitStats post={post}/>
+                            }</div>
                         </div>
                     </td>
                 </tr>
