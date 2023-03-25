@@ -1,26 +1,33 @@
 import React from "react";
 import TuitStats from "../tuits/TuitStats";
+import {useDispatch} from "react-redux";
+import {deleteTuit} from "../tuits/tuits-reducer";
 
 const HomePostList = ({post}) => {
     const postObj = post;
     const isRetweet = post.retweet;
     const likeComment = post.likeComment;
+    const dispatch = useDispatch();
+    const deleteTuitHandler = (id) => {
+        dispatch(deleteTuit(id));
+    };
 
     return (
         <>
             {!isRetweet && (
                 <>
-                    <tr className="row">
+                    <tr>
                         <td className="col-2">
                             <img
-                                width={70}
-                                className="float-end rounded-circle"
+                                width={55}
+                                className="float-left rounded-circle"
                                 src={`../tuiter/images/${post.avatar}`}
                                 alt={post.handle}
                             />
                         </td>
                         <td className="col-9">
                             <div>
+
                                 <span className="fw-bold me-1 ">{post.userName}</span>
                                 <span><i
                                     className="bi bi-patch-check-fill text-primary me-1 "></i>
@@ -35,6 +42,11 @@ const HomePostList = ({post}) => {
                             }
                         </td>
                         <td className="col-1 ps-4">
+                            <div>
+                                <i className="bi bi-x-lg float-end" onClick={() => deleteTuitHandler(post._id)}>
+
+                                </i>
+                            </div>
                             <i className="bi bi-three-dots override-color"></i>
                         </td>
                     </tr>
