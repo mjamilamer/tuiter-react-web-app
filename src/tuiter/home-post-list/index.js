@@ -20,7 +20,7 @@ const HomePostList = ({post}) => {
                         <td className="col-2">
                             <img
                                 width={55}
-                                className="float-left rounded-circle"
+                                className="float-left; rounded-circle"
                                 src={`../tuiter/images/${post.avatar}`}
                                 alt={post.handle}
                             />
