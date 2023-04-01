@@ -2,6 +2,7 @@ import React from "react";
 import TuitStats from "../tuits/TuitStats";
 import {useDispatch} from "react-redux";
 import {deleteTuit} from "../tuits/tuits-reducer";
+import {deleteTuitThunk} from "../../services/tuits-thunks";
 
 const HomePostList = ({post}) => {
     const postObj = post;
@@ -9,8 +10,8 @@ const HomePostList = ({post}) => {
     const likeComment = post.likeComment;
     const dispatch = useDispatch();
     const deleteTuitHandler = (id) => {
-        dispatch(deleteTuit(id));
-    };
+        dispatch(deleteTuitThunk(id));
+    }
 
     return (
         <>
@@ -43,7 +44,8 @@ const HomePostList = ({post}) => {
                         </td>
                         <td className="col-1 ps-4">
                             <div>
-                                <i className="bi bi-x-lg float-end" onClick={() => deleteTuitHandler(post._id)}>
+                                <i typeof="button" className=" btn btn-sm bi bi-x-lg  float-end"
+                                   onClick={() => deleteTuitHandler(post._id)}>
 
                                 </i>
                             </div>

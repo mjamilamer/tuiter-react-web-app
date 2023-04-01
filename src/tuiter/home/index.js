@@ -5,7 +5,8 @@ import WhatsHappening from "./whats-happening";
 
 
 const HomeComponent = () => {
-    const tuits = useSelector(state => state.tuits);
+    const {tuits, loading} = useSelector(
+        state => state.tuitsData);
     return (
         <>
             <WhatsHappening/>
