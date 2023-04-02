@@ -1,4 +1,7 @@
 import React, {useState} from 'react';
+import {updateTuitThunk} from "../../services/tuits-thunks";
+import {useDispatch} from "react-redux";
+
 
 export const usePostState = (initialState) => {
     const [post, setPost] = useState(initialState);
@@ -44,6 +47,7 @@ export const usePostState = (initialState) => {
 };
 
 const TuitStats = ({post}) => {
+    const dispatch = useDispatch();
     const {post: statePost, handleLikeClick, handleReplyClick, handleRetuitClick} = usePostState(
         post
     );
@@ -60,14 +64,16 @@ const TuitStats = ({post}) => {
                 </button>
             </div>
             <div className="col-3">
-                <button className={`btn btn-link text-decoration-none px-0 me-3 ${liked ? "text-danger" : ""}`}
-                        onClick={handleLikeClick}>
+                <button
+                    className={`btn btn-link text-decoration-none px-0 me-3 ${liked ? "text-danger" : ""}`}
+                    onClick={handleLikeClick}>
                     <i className={`bi bi-heart${liked ? "-fill" : ""}`}></i>
                     <span className="text-muted ms-1">{likes}</span>
                 </button>
             </div>
             <div className="col-3">
-                <button className="btn btn-link text-decoration-none px-0 me-3" onClick={handleRetuitClick}>
+                <button className="btn btn-link text-decoration-none px-0 me-3"
+                        onClick={handleRetuitClick}>
                     <i className="bi bi-arrow-counterclockwise"></i>
                     <span className="text-muted ms-1">{retuits}</span>
                 </button>
@@ -77,6 +83,21 @@ const TuitStats = ({post}) => {
                     <i className="bi bi-upload"></i>
                 </button>
             </div>
+            <div>
+                Likes: {post.likes}
+                <i onClick={() => dispatch(updateTuitThunk({
+                    ...post,
+                    likes: post.likes + 1
+                }))} className="bi bi-heart-fill me-2 text-danger"></i>
+            </div>
+            <div>
+                Dislikes: {post.likes}
+                <i onClick={() => dispatch(updateTuitThunk({
+                    ...post,
+                    likes: post.likes - 1
+                }))} className="bi bi-hand-thumbs-down-fill me-2 "></i>
+            </div>
+
         </div>
     );
 }

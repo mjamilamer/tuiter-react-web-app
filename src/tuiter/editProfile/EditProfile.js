@@ -1,17 +1,22 @@
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import {useState} from 'react';
 
-function EditProfile({profile, onSave}) {
-    const [name, setName] = useState(profile.firstName + ' ' + profile.lastName);
+
+function EditProfile({profile, onSave, onCancel}) {
+    const [firstName, setFirstName] = useState(profile.firstName);
+    const [lastName, setLastName] = useState(profile.lastName);
+    const [handle, setHandle] = useState(profile.handle);
     const [bio, setBio] = useState(profile.bio);
     const [location, setLocation] = useState(profile.location);
     const [website, setWebsite] = useState(profile.website);
-    const [dob, setDob] = useState(profile.dateOfBirth);
+    const [dob, setDob] = useState(profile.dateOfBirth ? new Date(profile.dateOfBirth).toISOString().substring(0, 10) : '');
 
     const handleSubmit = (event) => {
         event.preventDefault();
         onSave({
-            name,
+            firstName,
+            lastName,
+            handle,
             bio,
             location,
             website,
@@ -19,8 +24,14 @@ function EditProfile({profile, onSave}) {
         });
     };
 
-    const handleNameChange = (event) => {
-        setName(event.target.value);
+    const handleFirstNameChange = (event) => {
+        setFirstName(event.target.value);
+    };
+    const handleLastNameChange = (event) => {
+        setLastName(event.target.value);
+    };
+    const handleHandleChange = (event) => {
+        setHandle(event.target.value);
     };
 
     const handleBioChange = (event) => {
@@ -39,6 +50,9 @@ function EditProfile({profile, onSave}) {
         setDob(event.target.value);
     };
 
+    const handleCancel = (event) => {
+        onCancel();
+    }
     return (
         <div className="container">
             <h2>Edit Profile</h2>
@@ -48,9 +62,29 @@ function EditProfile({profile, onSave}) {
                     <input
                         type="text"
                         className="form-control"
-                        id="name"
-                        value={name}
-                        onChange={handleNameChange}
+                        id="firstName"
+                        value={firstName}
+                        onChange={handleFirstNameChange}
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="lastname">Name</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="lastName"
+                        value={lastName}
+                        onChange={handleLastNameChange}
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="handle">Handle</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="handle"
+                        value={handle}
+                        onChange={handleHandleChange}
                     />
                 </div>
                 <div className="form-group">
@@ -93,13 +127,17 @@ function EditProfile({profile, onSave}) {
                         onChange={handleDobChange}
                     />
                 </div>
-                <button type="submit" className="btn btn-primary mr-2">
-                    Save
-                </button>
-                <Link to="/tuiter/profile" className="btn btn-secondary">Cancel</Link>
             </form>
+            <button type="submit" form="myForm" className="btn btn-primary mr-2"
+                    onClick={handleSubmit}>
+                Save
+            </button>
+            <button onClick={handleCancel} className="btn btn-secondary">Cancel</button>
+
+
         </div>
     );
 }
 
 export default EditProfile;
+
